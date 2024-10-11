@@ -4,10 +4,10 @@ import BouncingBall from './BouncingBall';
 export default function LandingPage() {
     return (
         <div className="flex flex-col gap-y-9 items-center justify-center min-h-screen transform -translate-y-20">
-            <span className="flex flex-row text-8xl font-bold">
+            <span className="flex flex-row text-8xl font-bold select-none">
                 Soar Z
             </span>
-            <div className="text-lg">
+            <div className="text-lg select-none">
                 I psychologised. I life scienced. Now I am 
                 <span className="glowy font-bold">
                     &nbsp;design.

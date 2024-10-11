@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from "react"
 
 export default function BouncingBall() {
+    const winHeight = window.innerHeight;
+    const winWidth = window.innerWidth;
     const ballRef = useRef(null);
     const velocityRef = useRef({ x: 0, y: 0 });
-    const positionRef = useRef({ x: 0, y: 50 });
+    const positionRef = useRef({ x: winWidth / 4, y: winHeight / 2 });
     const [isDragging, setIsDragging] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 50 });
 
     const ballSize = 50;
     const acceleration = 0.5;
     const bounceFactor = 0.5;
-    const boundary = 20;
+    const boundary = 10;
     useEffect(() => {
         let animationFrame;
 
@@ -21,8 +23,8 @@ export default function BouncingBall() {
                 let newX = positionRef.current.x + velocityRef.current.x;
                 let newY = positionRef.current.y + velocityRef.current.y;
                 // If bottom boundary
-                if (newY > window.innerHeight + ballSize / 2) {
-                    newY = window.innerHeight + ballSize / 2;
+                if (newY > winHeight + ballSize / 2) {
+                    newY = winHeight + ballSize / 2;
                     velocityRef.current.y *= -1 * bounceFactor;
                 };
                 // If up boundary
@@ -36,8 +38,8 @@ export default function BouncingBall() {
                     velocityRef.current.x *= -1 * bounceFactor;
                 };
                 //If right boundary
-                if (newX > window.innerWidth - ballSize - boundary) {
-                    newX = window.innerWidth - ballSize - boundary;
+                if (newX > winWidth - ballSize - boundary) {
+                    newX = winWidth - ballSize - boundary;
                     velocityRef.current.x *= -1 * bounceFactor;
                 }
 
