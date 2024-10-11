@@ -1,0 +1,18 @@
+.glowy {
+    animation: glow 2.5s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        color: #ff66b2;
+    }
+    33% {
+        color: #9b59b6;
+    }
+    67% {
+        color: #3498db;
+    }
+    100% {
+        color: #ff66b2;
+    }
+}
