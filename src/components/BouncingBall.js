@@ -54,7 +54,7 @@ export default function BouncingBall() {
         return () => {
             cancelAnimationFrame(animationFrame);
         };
-    }, [isDragging]);
+    }, [isDragging, winWidth, winHeight]);
 
     const handleMouseClick = (e) => {
         setIsDragging(true);
