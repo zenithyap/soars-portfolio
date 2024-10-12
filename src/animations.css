@@ -2,6 +2,18 @@
     animation: glow 2.5s linear infinite;
 }
 
+.kitty {
+    position: absolute;
+    animation: kitten 0.4s steps(5) forwards;
+    background-image: url('./Images/Kitty/spritesheet.png');
+    height: 648px;
+    width: 864px;
+    z-index: 1;
+    scale: 0.1;
+    left: -62%;
+    top: -334%;
+}
+
 @keyframes glow {
     0% {
         color: #ff66b2;
@@ -14,5 +26,11 @@
     }
     100% {
         color: #ff66b2;
+    }
+}
+
+@keyframes kitten {
+    to { 
+        background-position: -4320px;
     }
 }
