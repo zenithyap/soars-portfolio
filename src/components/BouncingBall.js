@@ -1,3 +1,4 @@
+import { typeImplementation } from "@testing-library/user-event/dist/type/typeImplementation";
 import { useEffect, useRef, useState } from "react"
 
 export default function BouncingBall() {
@@ -6,6 +7,7 @@ export default function BouncingBall() {
     const ballRef = useRef(null);
     const velocityRef = useRef({ x: 0, y: 0 });
     const positionRef = useRef({ x: winWidth / 4, y: winHeight / 2 });
+    const lastTouchRef = useRef({x: 0, y: 0, timestamp: 0});
     const [isDragging, setIsDragging] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 50 });
 
@@ -13,6 +15,7 @@ export default function BouncingBall() {
     const acceleration = 0.5;
     const bounceFactor = 0.5;
     const boundary = 10;
+
     useEffect(() => {
         let animationFrame;
 
@@ -69,11 +72,50 @@ export default function BouncingBall() {
         velocityRef.current = {x: velX, y: velY};
         setPosition({x: newX, y: newY});
     };
-
+    
     const handleMouseUp = (e) => {
         setIsDragging(false);
         document.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseup', handleMouseUp);
+    };
+
+    const handleTouchStart = (e) => {
+        setIsDragging(true);
+        document.addEventListener('touchmove', handleTouchMove, { passive: false });
+        document.addEventListener('touchend', handleTouchEnd);
+    };
+
+    const handleTouchMove = (e) => {
+        e.preventDefault();
+
+        const touch = e.touches[0];
+        const newX = touch.clientX - ballSize / 2;
+        const newY = touch.clientY + ballSize;
+        const dt = (Date.now() - lastTouchRef.current.timestamp) / 10;
+
+        const velX = (newX - lastTouchRef.current.x) / dt;
+        const velY = (newY - lastTouchRef.current.y) / dt;
+        
+        velocityRef.current = {x: velX, y: velY};
+        positionRef.current = {x: newX, y: newY};
+        setPosition({x: newX, y: newY});
+        
+        lastTouchRef.current = {
+            x: newX,
+            y: newY,
+            timestamp: Date.now(),
+        }
+    };
+
+    const handleTouchEnd = (e) => {
+        setIsDragging(false);
+        lastTouchRef.current = {
+            x: 0,
+            y: 0,
+            timestamp: 0,
+        }
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
     };
 
     return (
@@ -82,6 +124,7 @@ export default function BouncingBall() {
             ref={ballRef}
             className="rounded-full w-[50px] h-[50px] bg-blue-500"
             onMouseDown={handleMouseClick}
+            onTouchStart={handleTouchStart}
         />
     );
 };
