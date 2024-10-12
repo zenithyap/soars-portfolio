@@ -4,7 +4,7 @@
 
 .kitty {
     position: absolute;
-    animation: kitten 0.4s steps(5) forwards;
+    animation: kitten 0.6s steps(5) forwards;
     background-image: url('./Images/Kitty/spritesheet.png');
     height: 648px;
     width: 864px;
