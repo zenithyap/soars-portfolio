@@ -1,4 +1,3 @@
-import { typeImplementation } from "@testing-library/user-event/dist/type/typeImplementation";
 import { useEffect, useRef, useState } from "react"
 
 export default function BouncingBall() {
