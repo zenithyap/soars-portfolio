@@ -12,7 +12,7 @@ export default function Dropdown() {
                 {!isOpen ? <AiOutlineCaretDown /> : <AiOutlineCaretUp />}
             </div>
             {isOpen && (
-                <div className="flex flex-col absolute w-[130px] top-12 gap-1 bg-slate-200 p-2 rounded-lg">
+                <div className="flex flex-col absolute w-[130px] top-12 gap-1 bg-slate-200 p-2 rounded-lg font-normal">
                     <a href="/#digital_art">digital Art</a>
                     <div className="border-b border-white" />
                     <a href="/#traditional_art">Traditional Art</a>
