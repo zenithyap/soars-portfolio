@@ -15,7 +15,7 @@ export default function DigitalArt() {
             <div className="text-5xl font-semibold">
                 Digital Art
             </div>
-            <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-8 border-24 border-transparent w-5/6">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4 border-24 border-transparent w-5/6">
                 <div className="grid gap-4">
                     <img className="rounded-xl" src={capybara} alt="capybara_image" />
                     <img className="rounded-xl" src={cat_piano} alt="cat_piano_image" />
