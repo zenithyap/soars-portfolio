@@ -11,6 +11,7 @@ const HashRedirect = () => {
     if (location.hash) {
       window.location.href = "/"
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return null;
