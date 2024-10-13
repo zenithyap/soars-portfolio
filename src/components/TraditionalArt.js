@@ -14,6 +14,7 @@ import nini from "../Images/TraditionalArt/nini.jpg";
 export default function TraditionalArt() {
     return (
         <div className="flex flex-col items-center mt-[10%]">
+            <section id="traditional_art"/>
             <div className="text-5xl font-semibold">
                 Traditional Art
             </div>

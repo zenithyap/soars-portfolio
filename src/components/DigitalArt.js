@@ -12,6 +12,7 @@ import grandma from '../Images/DigitalArt/grandma.jpg';
 export default function DigitalArt() {
     return (
         <div className="flex flex-col items-center">
+            <section id="digital_art" />
             <div className="text-5xl font-semibold">
                 Digital Art
             </div>

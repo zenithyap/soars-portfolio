@@ -121,7 +121,7 @@ export default function BouncingBall() {
         <div
             style={{ position: "absolute", top: `${position.y}px`, left: `${position.x}px` }}
             ref={ballRef}
-            className="rounded-full w-[50px] h-[50px] bg-blue-500"
+            className="rounded-full w-[50px] h-[50px] bg-blue-500 z-20"
             onMouseDown={handleMouseClick}
             onTouchStart={handleTouchStart}
         />
