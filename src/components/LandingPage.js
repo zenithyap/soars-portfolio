@@ -3,6 +3,7 @@ import BouncingBall from './BouncingBall';
 import Kitty from './Kitty';
 import DigitalArt from './DigitalArt';
 import TraditionalArt from './TraditionalArt';
+import Footer from './Footer';
 
 export default function LandingPage() {
     return (
@@ -22,6 +23,7 @@ export default function LandingPage() {
             </div>
             <DigitalArt />
             <TraditionalArt />
+            <Footer />
         </div>
     );
 };
