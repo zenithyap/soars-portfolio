@@ -12,9 +12,9 @@ export default function Photography() {
     return (
         <div>
             <div className="flex flex-col items-center mt-[10%]">
-            <section id="digital_art" />
+            <section id="photography" />
             <div className="text-5xl font-semibold">
-                Digital Art
+                Photography
             </div>
             <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4 border-24 border-transparent w-5/6 items-start">
                 <div className="grid gap-4">
