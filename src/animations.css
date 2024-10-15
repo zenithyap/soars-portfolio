@@ -18,6 +18,11 @@
     animation: glow 1.5s linear infinite;
 }
 
+.dropdown-slidy {
+    animation: dropdown-slide 0.2s linear forwards;
+    transform-origin: top;
+}
+
 @keyframes glow {
     0% {
         color: #ff66b2;
@@ -36,5 +41,14 @@
 @keyframes kitten {
     to { 
         background-position: -4320px;
+    }
+}
+
+@keyframes dropdown-slide {
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
     }
 }
