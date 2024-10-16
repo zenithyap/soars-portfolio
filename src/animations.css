@@ -14,6 +14,16 @@
     top: -334%;
 }
 
+.kitty-idly {
+    position: absolute;
+    animation: kitty-idle 1s steps(13) infinite;
+    background-image: url('./Images/KittyIdle/spritesheet.png');
+    height: 364px;
+    width: 396px;
+    scale: 0.2;
+    left: 30%;
+}
+
 .hover-glowy:hover {
     animation: glow 1.5s linear infinite;
 }
@@ -50,5 +60,11 @@
     }
     to {
         transform: scaleY(1);
+    }
+}
+
+@keyframes kitty-idle {
+    to {
+        background-position: -5148px;
     }
 }

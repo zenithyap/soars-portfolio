@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 
+const winHeight = window.innerHeight;
+
 export default function BouncingBall() {
-    const winHeight = window.innerHeight;
     const winWidth = window.innerWidth;
     const ballRef = useRef(null);
     const velocityRef = useRef({ x: 0, y: 0 });
@@ -25,8 +26,8 @@ export default function BouncingBall() {
                 let newX = positionRef.current.x + velocityRef.current.x;
                 let newY = positionRef.current.y + velocityRef.current.y;
                 // If bottom boundary
-                if (newY > winHeight + ballSize / 2) {
-                    newY = winHeight + ballSize / 2;
+                if (newY > winHeight - ballSize) { 
+                    newY = winHeight - ballSize;
                     velocityRef.current.y *= -1 * bounceFactor;
                 };
                 // If up boundary
@@ -54,7 +55,7 @@ export default function BouncingBall() {
         return () => {
             cancelAnimationFrame(animationFrame);
         };
-    }, [isDragging, winWidth, winHeight]);
+    }, [isDragging]);
 
     const handleMouseClick = (e) => {
         setIsDragging(true);
@@ -64,7 +65,7 @@ export default function BouncingBall() {
 
     const handleMouseMove = (e) => {
         const newX = e.clientX - ballSize / 2;
-        const newY = e.clientY + ballSize;
+        const newY = e.clientY - ballSize / 2 + window.scrollY;
         const velX = e.movementX;
         const velY = e.movementY;
         positionRef.current = {x: newX, y: newY};
@@ -89,8 +90,8 @@ export default function BouncingBall() {
 
         const touch = e.touches[0];
         const newX = touch.clientX - ballSize / 2;
-        const newY = touch.clientY + ballSize;
-        const dt = (Date.now() - lastTouchRef.current.timestamp) / 10;
+        const newY = touch.clientY - ballSize / 2 + window.scrollY;
+        const dt = (Date.now() - lastTouchRef.current.timestamp) / 14;
 
         const velX = (newX - lastTouchRef.current.x) / dt;
         const velY = (newY - lastTouchRef.current.y) / dt;
