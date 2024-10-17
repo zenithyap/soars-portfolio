@@ -40,6 +40,7 @@ function KittyIdle( {ballPosition, ballVelocity} ) {
         };
         animateKitty();
         return (() => cancelAnimationFrame(animationFrame));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[ballPosition]);
 
     return (
