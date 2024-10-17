@@ -14,11 +14,17 @@ function KittyIdle( {ballPosition, ballVelocity} ) {
     const RIGHT = "right";
     const STAND = "";
     const winWidth = window.innerWidth;
-    const speed = Math.min(Math.abs(ballVelocity), 1);
     const distanceThreshold = 1;
     const kittyPosition = useRef(winWidth / 2 - 216);
     const [position, setPosition] = useState(winWidth / 2 - 216);
     const [move, setMove] = useState("left");
+
+    let speed;
+    if (ballVelocity < 1 && ballVelocity > 0) {
+        speed = ballVelocity;
+    } else {
+        speed = 1;
+    }
 
     useEffect(() => {
         let animationFrame;
@@ -26,7 +32,7 @@ function KittyIdle( {ballPosition, ballVelocity} ) {
         const animateKitty = () => {
             const distance = ballPosition - kittyPosition.current - 183;
 
-            if (distance + 70 < distanceThreshold && Math.abs(ballVelocity) > 0) {
+            if (distance + 70 < distanceThreshold) {
                 kittyPosition.current -= speed;
                 setMove(LEFT);
             } else if (distance - 100 > distanceThreshold) {
