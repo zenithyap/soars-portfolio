@@ -1,14 +1,12 @@
 import '../animations.css';
-import BouncingBall from './BouncingBall';
-import {Kitty, KittyIdle} from './Kitty';
+import { Kitty } from './Kitty';
+import KittyBall from './KittyBall';
 import DigitalArt from './DigitalArt';
 import TraditionalArt from './TraditionalArt';
 import Photography from './Photography';
 import Footer from './Footer';
 
 export default function LandingPage() {
-    const winHeight = window.innerHeight;
-
     return (
         <div>
             <div className={`h-svh w-screen relative`}>
@@ -24,8 +22,7 @@ export default function LandingPage() {
                         </span>
                     </div>
                 </div>
-                <BouncingBall />
-                <KittyIdle/>
+                <KittyBall />
             </div>
             <DigitalArt />
             <TraditionalArt />
