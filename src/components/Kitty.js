@@ -20,8 +20,8 @@ function KittyIdle( {ballPosition, ballVelocity} ) {
     const [move, setMove] = useState("left");
 
     let speed;
-    if (ballVelocity < 1 && ballVelocity > 0) {
-        speed = ballVelocity;
+    if (ballVelocity < 1 && ballVelocity > -1 && ballVelocity !== 0) {
+        speed = Math.abs(ballVelocity);
     } else {
         speed = 1;
     }
