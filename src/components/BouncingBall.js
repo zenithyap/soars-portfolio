@@ -63,7 +63,7 @@ export default function BouncingBall( {position, setPosition, velocityRef} ) {
     };
 
     const handleMouseMove = (e) => {
-        const newX = e.clientX - ballSize - boundary;
+        const newX = e.clientX - ballSize / 2;
         const newY = e.clientY - ballSize / 2 + window.scrollY;
         const velX = e.movementX;
         const velY = e.movementY;
@@ -88,7 +88,7 @@ export default function BouncingBall( {position, setPosition, velocityRef} ) {
         e.preventDefault();
 
         const touch = e.touches[0];
-        const newX = touch.clientX - ballSize - boundary;
+        const newX = touch.clientX - ballSize / 2;
         const newY = touch.clientY - ballSize / 2 + window.scrollY;
         const dt = (Date.now() - lastTouchRef.current.timestamp) / 14;
 
