@@ -13,8 +13,8 @@ export default function BouncingBall( {position, setPosition, velocityRef} ) {
     const acceleration = 0.5;
     const bounceFactor = 0.5;
     const boundary = 10;
-    const airResistanceX = 0.01;
-    const velXThreshhold = 0.1;
+    // const airResistanceX = 0.1;
+    // const velXThreshhold = 0.1;
 
     useEffect(() => {
         let animationFrame;
@@ -22,15 +22,15 @@ export default function BouncingBall( {position, setPosition, velocityRef} ) {
         const animateBall = () => {
             if (!isDragging) {
                 velocityRef.current.y += acceleration;
-                if (velocityRef.current.x > 0) {
-                    velocityRef.current.x -= airResistanceX;
-                } else {
-                    velocityRef.current.x += airResistanceX;
-                }
+                // if (velocityRef.current.x > 0) {
+                //     velocityRef.current.x -= airResistanceX;
+                // } else {
+                //     velocityRef.current.x += airResistanceX;
+                // }
 
-                if (Math.abs(velocityRef.current.x) < velXThreshhold) {
-                    velocityRef.current.x = 0;
-                }
+                // if (Math.abs(velocityRef.current.x) < velXThreshhold) {
+                //     velocityRef.current.x = 0;
+                // }
 
                 let newX = positionRef.current.x + velocityRef.current.x;
                 let newY = positionRef.current.y + velocityRef.current.y;
