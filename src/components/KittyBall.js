@@ -7,7 +7,7 @@ export default function KittyBall() {
     const ballVelocity = useRef({ x: 0, y: 0});
 
     return (
-        <div>
+        <div className="h-svh">
             <KittyIdle ballPosition={ballPosition.x} ballVelocity={ballVelocity.current.x} />
             <BouncingBall position={ballPosition} setPosition={setBallPosition} velocityRef={ballVelocity} />
         </div>
