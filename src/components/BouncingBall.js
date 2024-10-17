@@ -2,10 +2,9 @@ import { useEffect, useRef, useState } from "react"
 
 const winHeight = window.innerHeight;
 
-export default function BouncingBall( {position, setPosition} ) {
+export default function BouncingBall( {position, setPosition, velocityRef} ) {
     const winWidth = window.innerWidth;
     const ballRef = useRef(null);
-    const velocityRef = useRef({ x: 0, y: 0 });
     const positionRef = useRef({ x: winWidth / 4, y: winHeight / 2 });
     const lastTouchRef = useRef({x: 0, y: 0, timestamp: 0});
     const [isDragging, setIsDragging] = useState(false);

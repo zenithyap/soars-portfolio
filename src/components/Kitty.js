@@ -9,12 +9,12 @@ function Kitty() {
     );
 }
 
-function KittyIdle( {ballPosition} ) {
+function KittyIdle( {ballPosition, ballVelocity} ) {
     const LEFT = "left";
     const RIGHT = "right";
     const STAND = "";
     const winWidth = window.innerWidth;
-    const speed = 1;
+    const speed = Math.min(Math.abs(ballVelocity), 1);
     const distanceThreshold = 1;
     const kittyPosition = useRef(winWidth / 2 - 216);
     const [position, setPosition] = useState(winWidth / 2 - 216);
@@ -26,10 +26,10 @@ function KittyIdle( {ballPosition} ) {
         const animateKitty = () => {
             const distance = ballPosition - kittyPosition.current - 183;
 
-            if (distance + 80 < distanceThreshold) {
+            if (distance + 70 < distanceThreshold && Math.abs(ballVelocity) > 0) {
                 kittyPosition.current -= speed;
                 setMove(LEFT);
-            } else if (distance - 80 > distanceThreshold) {
+            } else if (distance - 100 > distanceThreshold) {
                 kittyPosition.current += speed
                 setMove(RIGHT);
             } else {
