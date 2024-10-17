@@ -24,6 +24,26 @@
     left: 30%;
 }
 
+.kitty-lefty {
+    position: absolute;
+    animation: kitty-standup 0.3s steps(4) forwards, 0.8s kitty-walk 0.4s steps(6) infinite;
+    background-image: url('./Images/KittyLeft/spritesheet.png');
+    height: 364px;
+    width: 460px;
+    scale: 0.2;
+    left: 30%;
+}
+
+.kitty-righty {
+    position: absolute;
+    animation: kitty-standup 0.4s steps(4) forwards, 0.8s kitty-walk 0.4s steps(6) infinite;
+    background-image: url('./Images/KittyRight/spritesheet.png');
+    height: 364px;
+    width: 460px;
+    scale: 0.2;
+    left: 30%;
+}
+
 .hover-glowy:hover {
     animation: glow 1.5s linear infinite;
 }
@@ -66,5 +86,20 @@
 @keyframes kitty-idle {
     to {
         background-position: -5148px;
+    }
+}
+
+@keyframes kitty-walk {
+    from {
+        background-position: -1840px;
+    }
+    to {
+        background-position: -4600px;
+    }
+}
+
+@keyframes kitty-standup {
+    to {
+        background-position: -1840px;
     }
 }

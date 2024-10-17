@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import '../animations.css';
 
+const winHeight = window.innerHeight;
+
 function Kitty() {
     return (
         <div className='kitty' />
@@ -8,12 +10,13 @@ function Kitty() {
 }
 
 function KittyIdle( {ballPosition} ) {
-    const winHeight = window.innerHeight;
     const winWidth = window.innerWidth;
-    const speed = 0.5;
+    const speed = 1;
     const distanceThreshold = 1;
     const kittyPosition = useRef(winWidth / 2 - 216);
     const [position, setPosition] = useState(winWidth / 2 - 216);
+    const [isMoveLeft, setIsMoveLeft] = useState(false);
+    const [isMoveRight, setIsMoveRight] = useState(false);
 
     useEffect(() => {
         let animationFrame;
@@ -22,10 +25,14 @@ function KittyIdle( {ballPosition} ) {
             const distance = ballPosition - kittyPosition.current - 183;
 
             if (distance + 80 < distanceThreshold) {
-                kittyPosition.current -= speed
-            } 
-            if (distance - 80 > distanceThreshold) {
+                kittyPosition.current -= speed;
+                setIsMoveLeft(true);
+            } else if (distance - 80 > distanceThreshold) {
                 kittyPosition.current += speed
+                setIsMoveRight(true);
+            } else {
+                setIsMoveLeft(false);
+                setIsMoveRight(false);
             }
             setPosition(kittyPosition.current);
             animationFrame = requestAnimationFrame(animateKitty);
@@ -35,7 +42,13 @@ function KittyIdle( {ballPosition} ) {
     },[ballPosition]);
 
     return (
-        <div className="kitty-idly" style={{top: `${winHeight - 216}px`, left: `${position}px`}}/>
+        <div 
+            className={isMoveLeft ? "kitty-lefty" : isMoveRight ? "kitty-righty" : "kitty-idly"} 
+            style={{
+                top: `${winHeight - 216}px`, 
+                left: `${position}px`
+            }}
+        />
     );
 }
 
