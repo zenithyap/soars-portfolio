@@ -1,4 +1,3 @@
-import cat from "../../Images/ImaginativeSketching/cat.jpg";
 import piano from "../../Images/ImaginativeSketching/piano.jpg";
 import room from "../../Images/ImaginativeSketching/room.jpg";
 import pens1 from "../../Images/ImaginativeSketching/pens1.jpg";
