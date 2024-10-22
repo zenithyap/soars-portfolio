@@ -4,7 +4,6 @@ import KittyBall from './KittyBall';
 import DigitalArt from './DigitalArt';
 import TraditionalArt from './TraditionalArt';
 import Photography from './Photography';
-import Footer from './Footer';
 
 export default function LandingPage() {
     return (
@@ -27,7 +26,6 @@ export default function LandingPage() {
             <DigitalArt />
             <TraditionalArt />
             <Photography />
-            <Footer />
         </div>
     );
 };
