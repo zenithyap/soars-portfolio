@@ -49,11 +49,11 @@ export default function University() {
 
     return (
         <div className="flex flex-col gap-3">
-            <div className="font-bold text-4xl">Bachelor of Science (Honours), Life Sciences</div>
-            <div className="text-xl font-raleway">National University of Singapore</div>
-            <div className="text-xl font-raleway">2021-2025</div>
-            <div className="text-xl font-raleway">GPA: 4.53/5.0</div>
-            <div className="mt-4 font-semibold text-xl font-raleway">Art of Imaginative Sketching: Distinction</div>
+            <div className="font-bold text-xl lg:text-4xl">Bachelor of Science (Honours), Life Sciences</div>
+            <div className="text-base lg:text-xl font-raleway">National University of Singapore</div>
+            <div className="text-base lg:text-xl font-raleway">2021-2025</div>
+            <div className="text-base lg:text-xl font-raleway">GPA: 4.53/5.0</div>
+            <div className="mt-4 font-semibold text-base lg:text-xl font-raleway">Art of Imaginative Sketching: Distinction</div>
             {
                 isLaptop() ? <LaptopImages /> : <MobileImages />
             }

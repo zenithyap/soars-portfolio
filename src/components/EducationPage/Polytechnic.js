@@ -3,12 +3,12 @@ import page2 from "../../Images/VisualCommunication/page2.jpg";
 
 export default function Polytechnic() {
     return (
-        <div className="flex flex-col gap-3 mt-[10%]">
-            <div className="font-bold text-4xl">Diploma in Psychology Studies</div>
-            <div className="text-xl font-raleway">Ngee Ann polytechnic</div>
-            <div className="text-xl font-raleway">2018-2021</div>
-            <div className="text-xl font-raleway">GPA: 3.82/4.0</div>
-            <div className="mt-4 font-semibold text-xl font-raleway">Visual Communications module: Distinction</div>
+        <div className="flex flex-col gap-3 mt-[calc(5%+50px)]">
+            <div className="font-bold text-xl lg:text-4xl">Diploma in Psychology Studies</div>
+            <div className="text-base lg:text-xl font-raleway">Ngee Ann polytechnic</div>
+            <div className="text-base lg:text-xl font-raleway">2018-2021</div>
+            <div className="text-base lg:text-xl font-raleway">GPA: 3.82/4.0</div>
+            <div className="mt-4 font-semibold text-base lg:text-xl font-raleway">Visual Communications module: Distinction</div>
             <div className="flex flex-col lg:flex-row gap-3">
                 <div>
                     <img src={page1} alt="page1alt" />

@@ -14,7 +14,7 @@ export default function LandingPage() {
                         Soar Z
                         <Kitty />
                     </div>
-                    <div className="text-lg select-none">
+                    <div className="text-base select-none">
                         I psychologised. I life scienced. Now I am
                         <span className="glowy font-bold">
                             &nbsp;design.
