@@ -11,7 +11,7 @@ export default function WalkingKitty( {ballPosition, ballVelocity} ) {
     const distanceThreshold = 1;
     const kittyPosition = useRef(winWidth / 2 - 216);
     const [position, setPosition] = useState(winWidth / 2 - 216);
-    const [move, setMove] = useState("left");
+    const [move, setMove] = useState(STAND);
 
     let speed;
     if (ballVelocity < 1 && ballVelocity > -1 && ballVelocity !== 0) {
@@ -47,7 +47,7 @@ export default function WalkingKitty( {ballPosition, ballVelocity} ) {
         <div 
             className={move === LEFT ? "kitty-lefty" : move === RIGHT ? "kitty-righty" : "kitty-idly"} 
             style={{
-                top: `${winHeight - 216}px`, 
+                top: `${winHeight - 216}px`,
                 left: `${position}px`
             }}
         />
