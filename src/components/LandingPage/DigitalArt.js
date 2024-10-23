@@ -1,12 +1,12 @@
-import shooting_star from '../Images/DigitalArt/shooting_star.jpg';
-import cat_piano from '../Images/DigitalArt/cat_piano.jpg';
-import sun_moon from '../Images/DigitalArt/sun_moon.jpg';
-import capybara from '../Images/DigitalArt/capybara.jpg';
-import sad_fox from '../Images/DigitalArt/sad_fox.jpg';
-import campfire from '../Images/DigitalArt/campfire.jpg';
-import butterfly from '../Images/DigitalArt/butterfly.jpg';
-import souffle from '../Images/DigitalArt/souffle.jpg';
-import grandma from '../Images/DigitalArt/grandma.jpg';
+import shooting_star from './Images/DigitalArt/shooting_star.jpg';
+import cat_piano from './Images/DigitalArt/cat_piano.jpg';
+import sun_moon from './Images/DigitalArt/sun_moon.jpg';
+import capybara from './Images/DigitalArt/capybara.jpg';
+import sad_fox from './Images/DigitalArt/sad_fox.jpg';
+import campfire from './Images/DigitalArt/campfire.jpg';
+import butterfly from './Images/DigitalArt/butterfly.jpg';
+import souffle from './Images/DigitalArt/souffle.jpg';
+import grandma from './Images/DigitalArt/grandma.jpg';
 
 
 export default function DigitalArt() {

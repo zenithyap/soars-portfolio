@@ -1,15 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
-import '../animations.css';
+import { useRef, useEffect, useState } from "react";
+import '../../../animations.css';
 
 const winHeight = window.innerHeight;
 
-function Kitty() {
-    return (
-        <div className='kitty' />
-    );
-}
-
-function KittyIdle( {ballPosition, ballVelocity} ) {
+export default function WalkingKitty( {ballPosition, ballVelocity} ) {
     const LEFT = "left";
     const RIGHT = "right";
     const STAND = "";
@@ -59,5 +53,3 @@ function KittyIdle( {ballPosition, ballVelocity} ) {
         />
     );
 }
-
-export {Kitty, KittyIdle};

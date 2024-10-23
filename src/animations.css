@@ -5,7 +5,7 @@
 .kitty {
     position: absolute;
     animation: kitten 0.6s steps(5) forwards;
-    background-image: url('./Images/Kitty/spritesheet.png');
+    background-image: url('./components/LandingPage/Images/KittyOnName/spritesheet.png');
     height: 648px;
     width: 864px;
     z-index: 1;
@@ -17,7 +17,7 @@
 .kitty-idly {
     position: absolute;
     animation: kitty-idle 1s steps(13) infinite;
-    background-image: url('./Images/KittyIdle/spritesheet.png');
+    background-image: url('./components/LandingPage/KittyBall/Images/idle-spritesheet.png');
     height: 364px;
     width: 396px;
     scale: 0.2;
@@ -27,7 +27,7 @@
 .kitty-lefty {
     position: absolute;
     animation: kitty-standup 0.3s steps(4) forwards, 0.8s kitty-walk 0.4s steps(6) infinite;
-    background-image: url('./Images/KittyLeft/spritesheet.png');
+    background-image: url('./components/LandingPage/KittyBall/Images/left-spritesheet.png');
     height: 364px;
     width: 460px;
     scale: 0.2;
@@ -37,7 +37,7 @@
 .kitty-righty {
     position: absolute;
     animation: kitty-standup 0.4s steps(4) forwards, 0.8s kitty-walk 0.4s steps(6) infinite;
-    background-image: url('./Images/KittyRight/spritesheet.png');
+    background-image: url('./components/LandingPage/KittyBall/Images/right-spritesheet.png');
     height: 364px;
     width: 460px;
     scale: 0.2;

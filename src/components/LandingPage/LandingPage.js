@@ -1,6 +1,6 @@
-import '../animations.css';
-import { Kitty } from './Kitty';
-import KittyBall from './KittyBall';
+import '../../animations.css';
+import KittyOnName from './KittyOnName';
+import KittyBall from './KittyBall/KittyBall';
 import DigitalArt from './DigitalArt';
 import TraditionalArt from './TraditionalArt';
 import Photography from './Photography';
@@ -12,7 +12,7 @@ export default function LandingPage() {
                 <div className={`flex flex-col gap-y-9 items-center justify-center h-svh transform -translate-y-10`}>
                     <div className="relative flex flex-row text-8xl font-bold select-none">
                         Soar Z
-                        <Kitty />
+                        <KittyOnName />
                     </div>
                     <div className="text-base select-none">
                         I psychologised. I life scienced. Now I am

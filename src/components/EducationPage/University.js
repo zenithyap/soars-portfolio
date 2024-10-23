@@ -1,9 +1,9 @@
-import piano from "../../Images/ImaginativeSketching/piano.jpg";
-import room from "../../Images/ImaginativeSketching/room.jpg";
-import pens1 from "../../Images/ImaginativeSketching/pens1.jpg";
-import pens2 from "../../Images/ImaginativeSketching/pens2.jpg";
-import pens3 from "../../Images/ImaginativeSketching/pens3.jpg";
-import pens4 from "../../Images/ImaginativeSketching/pens4.jpg";
+import piano from "./Images/University/ImaginativeSketching/piano.jpg";
+import room from "./Images/University/ImaginativeSketching/room.jpg";
+import pens1 from "./Images/University/ImaginativeSketching/pens1.jpg";
+import pens2 from "./Images/University/ImaginativeSketching/pens2.jpg";
+import pens3 from "./Images/University/ImaginativeSketching/pens3.jpg";
+import pens4 from "./Images/University/ImaginativeSketching/pens4.jpg";
 import { useRef } from "react";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 

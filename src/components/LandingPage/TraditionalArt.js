@@ -1,15 +1,15 @@
-import couple from "../Images/TraditionalArt/couple.jpg";
-import deer from "../Images/TraditionalArt/deer.jpg";
-import dog from "../Images/TraditionalArt/dog.jpg";
-import flower from "../Images/TraditionalArt/flower.jpg";
-import fox from "../Images/TraditionalArt/fox.jpg";
-import mural from "../Images/TraditionalArt/mural.jpg";
-import otah from "../Images/TraditionalArt/otah.jpg";
-import toothless from "../Images/TraditionalArt/toothless.jpg";
-import abstract from "../Images/TraditionalArt/abstract.jpg";
-import flowerfield from "../Images/TraditionalArt/flowerfield.jpg";
-import forest from "../Images/TraditionalArt/forest.jpg";
-import nini from "../Images/TraditionalArt/nini.jpg";
+import couple from "./Images/TraditionalArt/couple.jpg";
+import deer from "./Images/TraditionalArt/deer.jpg";
+import dog from "./Images/TraditionalArt/dog.jpg";
+import flower from "./Images/TraditionalArt/flower.jpg";
+import fox from "./Images/TraditionalArt/fox.jpg";
+import mural from "./Images/TraditionalArt/mural.jpg";
+import otah from "./Images/TraditionalArt/otah.jpg";
+import toothless from "./Images/TraditionalArt/toothless.jpg";
+import abstract from "./Images/TraditionalArt/abstract.jpg";
+import flowerfield from "./Images/TraditionalArt/flowerfield.jpg";
+import forest from "./Images/TraditionalArt/forest.jpg";
+import nini from "./Images/TraditionalArt/nini.jpg";
 
 export default function TraditionalArt() {
     return (

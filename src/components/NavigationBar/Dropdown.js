@@ -1,6 +1,6 @@
 import { AiOutlineCaretDown, AiOutlineCaretUp } from "react-icons/ai";
 import { useState } from "react";
-import '../animations.css';
+import '../../animations.css';
 
 export default function Dropdown() {
     const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,5 @@
-import page1 from "../../Images/VisualCommunication/page1.jpg";
-import page2 from "../../Images/VisualCommunication/page2.jpg";
+import page1 from "./Images/Polytechnic/VisualCommunication/page1.jpg";
+import page2 from "./Images/Polytechnic/VisualCommunication/page2.jpg";
 
 export default function Polytechnic() {
     return (

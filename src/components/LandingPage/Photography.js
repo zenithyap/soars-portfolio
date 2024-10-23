@@ -1,12 +1,12 @@
-import butterfly from "../Images/Photography/butterfly.jpg";
-import chicken from "../Images/Photography/chicken.jpg";
-import dragonfly from "../Images/Photography/dragonfly.jpg";
-import field from "../Images/Photography/field.jpg";
-import flower from "../Images/Photography/flower.jpg";
-import lizard from "../Images/Photography/lizard.jpg";
-import monkey from "../Images/Photography/monkey.jpg";
-import otah from "../Images/Photography/otah.jpg";
-import spiderweb from "../Images/Photography/spiderweb.jpg";
+import butterfly from "./Images/Photography/butterfly.jpg";
+import chicken from "./Images/Photography/chicken.jpg";
+import dragonfly from "./Images/Photography/dragonfly.jpg";
+import field from "./Images/Photography/field.jpg";
+import flower from "./Images/Photography/flower.jpg";
+import lizard from "./Images/Photography/lizard.jpg";
+import monkey from "./Images/Photography/monkey.jpg";
+import otah from "./Images/Photography/otah.jpg";
+import spiderweb from "./Images/Photography/spiderweb.jpg";
 
 export default function Photography() {
     return (

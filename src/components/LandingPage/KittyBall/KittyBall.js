@@ -1,4 +1,4 @@
-import { KittyIdle } from "./Kitty";
+import WalkingKitty from "./WalkingKitty";
 import BouncingBall from "./BouncingBall";
 import { useRef, useState } from "react";
 
@@ -8,7 +8,7 @@ export default function KittyBall() {
 
     return (
         <div className="h-svh">
-            <KittyIdle ballPosition={ballPosition.x} ballVelocity={ballVelocity.current.x} />
+            <WalkingKitty ballPosition={ballPosition.x} ballVelocity={ballVelocity.current.x} />
             <BouncingBall position={ballPosition} setPosition={setBallPosition} velocityRef={ballVelocity} />
         </div>
     )
