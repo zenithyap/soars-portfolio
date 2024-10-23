@@ -3,8 +3,8 @@ import University from "./University";
 
 export default function EducationPage() {
     return (
-        <div className="flex justify-center w-svw pt-24">
-            <div className="w-[70%]">
+        <div className="flex justify-center pt-24">
+            <div className="w-[80%]">
                 <University />
                 <Polytechnic />
             </div>
