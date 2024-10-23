@@ -40,9 +40,9 @@ export default function University() {
     const LaptopImages = () => {
         return (
             <div className="flex flex-row items-center gap-10">
-                <FaArrowLeft className="w-28" onClick={handleLeftClick} />
+                <FaArrowLeft className="w-28 hover:cursor-pointer" onClick={handleLeftClick} />
                 <MobileImages />
-                <FaArrowRight className="w-28" onClick={handleRightClick} />
+                <FaArrowRight className="w-28 hover:cursor-pointer" onClick={handleRightClick} />
             </div>
         );
     };
