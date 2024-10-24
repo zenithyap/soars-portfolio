@@ -21,7 +21,6 @@
     height: 364px;
     width: 396px;
     scale: 0.2;
-    left: 30%;
 }
 
 .kitty-lefty {
@@ -31,7 +30,6 @@
     height: 364px;
     width: 460px;
     scale: 0.2;
-    left: 30%;
 }
 
 .kitty-righty {
@@ -41,7 +39,6 @@
     height: 364px;
     width: 460px;
     scale: 0.2;
-    left: 30%;
 }
 
 .hover-glowy:hover {

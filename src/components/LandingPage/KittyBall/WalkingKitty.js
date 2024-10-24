@@ -3,14 +3,16 @@ import '../../../animations.css';
 
 const winHeight = window.innerHeight;
 
-export default function WalkingKitty( {ballPosition, ballVelocity} ) {
+export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} ) {
+    const kittyRef = useRef(null);
     const LEFT = "left";
     const RIGHT = "right";
     const STAND = "";
     const winWidth = window.innerWidth;
-    const distanceThreshold = 1;
-    const kittyPosition = useRef(winWidth / 2 - 216);
-    const [position, setPosition] = useState(winWidth / 2 - 216);
+    const distanceThreshold = 60;
+    const kittyPosition = useRef(winWidth / 2 - 180);
+    // Only used to render the kitty when dragging the ball
+    const [position, setPosition] = useState(winWidth / 2 - 180);
     const [move, setMove] = useState(STAND);
 
     let speed;
@@ -24,18 +26,18 @@ export default function WalkingKitty( {ballPosition, ballVelocity} ) {
         let animationFrame;
 
         const animateKitty = () => {
-            const distance = ballPosition - kittyPosition.current - 183;
-
-            if (distance + 70 < distanceThreshold) {
+            const distance = ballPosition - kittyPosition.current;
+            console.log(distance)
+            if (distance < -distanceThreshold) {
                 kittyPosition.current -= speed;
                 setMove(LEFT);
-            } else if (distance - 100 > distanceThreshold) {
+            } else if (distance > distanceThreshold + 50) {
                 kittyPosition.current += speed
                 setMove(RIGHT);
             } else {
                 setMove(STAND);
             }
-            setPosition(kittyPosition.current);
+            if (isDragging) setPosition(kittyPosition.current);
             animationFrame = requestAnimationFrame(animateKitty);
         };
         animateKitty();
@@ -44,12 +46,18 @@ export default function WalkingKitty( {ballPosition, ballVelocity} ) {
     },[ballPosition]);
 
     return (
+        <div className="">
         <div 
+            ref={kittyRef}
             className={move === LEFT ? "kitty-lefty" : move === RIGHT ? "kitty-righty" : "kitty-idly"} 
             style={{
                 top: `${winHeight - 216}px`,
-                left: `${position}px`
+                left: 0,
+                transformOrigin: 'left',
+                transform: `translateX(${kittyPosition.current * 5}px)`
             }}
         />
+        </div>
+
     );
 }
