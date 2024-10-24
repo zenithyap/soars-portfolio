@@ -12,7 +12,7 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
     const distanceThreshold = 60;
     const kittyPosition = useRef(winWidth / 2 - 180);
     // Only used to render the kitty when dragging the ball
-    const [position, setPosition] = useState(winWidth / 2 - 180);
+    const [, setShouldRender] = useState(false);
     const [move, setMove] = useState(STAND);
 
     let speed;
@@ -37,7 +37,7 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
             } else {
                 setMove(STAND);
             }
-            if (isDragging) setPosition(kittyPosition.current);
+            if (isDragging) setShouldRender((prev) => !prev);
             animationFrame = requestAnimationFrame(animateKitty);
         };
         animateKitty();
