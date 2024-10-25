@@ -27,7 +27,6 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
 
         const animateKitty = () => {
             const distance = ballPosition - kittyPosition.current;
-            console.log(distance)
             if (distance < -distanceThreshold) {
                 kittyPosition.current -= speed;
                 setMove(LEFT);
