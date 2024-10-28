@@ -43,12 +43,6 @@ const typographyArray = [
 const verdanaArray = [verdanaPage1, verdanaPage2];
 
 export default function University() {
-    const heightThreshold = 800;
-
-    const isLaptop = () => {
-        return window.innerHeight > heightThreshold;
-    }
-
     return (
         <div className="relative flex flex-col gap-3 select-none">
             <div className="font-bold text-xl lg:text-4xl">Bachelor of Science (Honours), Life Sciences</div>
