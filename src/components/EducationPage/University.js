@@ -52,7 +52,7 @@ export default function University() {
             <div className="mt-4 font-semibold text-base lg:text-xl font-raleway">Art of Imaginative Sketching: Distinction</div>
             <ScrollingImagesHorizontal imagesArray={imaginativeSketchingArray} />
             <div className="mt-4 font-semibold text-base lg:text-xl font-raleway">Typographic Form and Communication</div>
-            <div className="grid grid-cols-1 lg:grid-cols-custom lg:flex-row gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:flex-row gap-3">
                 <ScrollingImagesVertical imagesArray={verdanaArray} />
                 <ScrollingImagesHorizontal imagesArray={typographyArray} />
             </div>

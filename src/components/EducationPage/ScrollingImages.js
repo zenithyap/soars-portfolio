@@ -45,7 +45,6 @@ function ScrollingImagesHorizontal({ imagesArray }) {
 
 function ScrollingImagesVertical({ imagesArray }) {
     const scrollRef = useRef(null);
-    const IMAGE_ASPECT_RATIO = "4093/5700";
 
     const handleUpClick = () => {
         const imageHeight = scrollRef.current.firstChild.clientHeight;
@@ -64,13 +63,13 @@ function ScrollingImagesVertical({ imagesArray }) {
                 onClick={handleUpClick}
             />
             <div ref={scrollRef}
-                className={`flex flex-col overflow-y-auto scroll-smooth`}
-                style={{aspectRatio: IMAGE_ASPECT_RATIO}}
+                className='flex flex-col overflow-y-auto scroll-smooth w-full'
+                style={{ aspectRatio: 0.715 }}
             >
                 {
                     imagesArray.map((item, key) => {
                         return (
-                            <img id={`${key}`} src={item} alt={`${item}`} />
+                            <img id={`${key}`} src={item} alt={`${item}`} className='w-full' />
                         );
                     })
                 }
