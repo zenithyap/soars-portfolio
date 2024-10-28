@@ -12,7 +12,10 @@ module.exports = {
       },
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
-      }
+      },
+      gridTemplateColumns: {
+        'custom': '3fr 5fr',
+      },
     },
   },
   plugins: [],

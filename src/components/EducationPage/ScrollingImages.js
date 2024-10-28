@@ -1,42 +1,31 @@
 import { useRef } from "react";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import {
+    MdKeyboardArrowLeft,
+    MdKeyboardArrowRight,
+    MdKeyboardArrowUp,
+    MdKeyboardArrowDown,
+} from "react-icons/md";
 
-function MobileScrollingImages({ imagesArray }) {
+function ScrollingImagesHorizontal({ imagesArray }) {
+    const GAP = 12;
     const scrollRef = useRef(null);
-
-    return (
-        <div className="relative">
-            <MdKeyboardArrowLeft className="size-5 absolute top-[50%] left-0" />
-            <div ref={scrollRef} className="flex flex-row overflow-x-auto gap-3 select-none scroll-smooth">
-                {
-                    imagesArray.map((item, key) => {
-                        return (
-                            <img id={`${key}`} src={item} alt={`${item}`} className="w-[600px]" />
-                        );
-                    })
-                }
-            </div>
-            <MdKeyboardArrowRight className="size-5 absolute top-[50%] right-0" />
-        </div>
-    );
-};
-
-function LaptopScrollingImages({ imagesArray }) {
-    const scrollRef = useRef(null);
-    const scrollAmount = 500;
 
     const handleLeftClick = () => {
-        scrollRef.current.scrollLeft -= scrollAmount;
+        const imageWidth = scrollRef.current.firstChild.clientWidth + GAP;
+        scrollRef.current.scrollLeft -= imageWidth;
     };
 
     const handleRightClick = () => {
-        scrollRef.current.scrollLeft += scrollAmount;
+        const imageWidth = scrollRef.current.firstChild.clientWidth + GAP;
+        scrollRef.current.scrollLeft += imageWidth;
     };
 
     return (
-        <div className="flex flex-row items-center gap-10">
-            <FaArrowLeft className="w-28 hover:cursor-pointer" onClick={handleLeftClick} />
+        <div className='relative max-h-[600px]'>
+            <MdKeyboardArrowLeft 
+                className="size-5 absolute top-[50%] left-0 hover:cursor-pointer" 
+                onClick={handleLeftClick} 
+            />
             <div ref={scrollRef} className="flex flex-row overflow-x-auto gap-3 select-none scroll-smooth">
                 {
                     imagesArray.map((item, key) => {
@@ -46,9 +35,52 @@ function LaptopScrollingImages({ imagesArray }) {
                     })
                 }
             </div>
-            <FaArrowRight className="w-28 hover:cursor-pointer" onClick={handleRightClick} />
+            <MdKeyboardArrowRight 
+                className="size-5 absolute top-[50%] right-0 hover:cursor-pointer" 
+                onClick={handleRightClick} 
+            />
         </div>
     );
 };
 
-export { MobileScrollingImages, LaptopScrollingImages }
+function ScrollingImagesVertical({ imagesArray }) {
+    const scrollRef = useRef(null);
+    const IMAGE_ASPECT_RATIO = "4093/5700";
+
+    const handleUpClick = () => {
+        const imageHeight = scrollRef.current.firstChild.clientHeight;
+        scrollRef.current.scrollTop -= imageHeight;
+    };
+
+    const handleDownClick = () => {
+        const imageHeight = scrollRef.current.firstChild.clientHeight;
+        scrollRef.current.scrollTop += imageHeight;
+    };
+
+    return (
+        <div className='relative justify-self-center'>
+            <MdKeyboardArrowUp 
+                className="size-5 absolute top-0 left-[50%] hover:cursor-pointer" 
+                onClick={handleUpClick}
+            />
+            <div ref={scrollRef}
+                className={`flex flex-col overflow-y-auto scroll-smooth`}
+                style={{aspectRatio: IMAGE_ASPECT_RATIO}}
+            >
+                {
+                    imagesArray.map((item, key) => {
+                        return (
+                            <img id={`${key}`} src={item} alt={`${item}`} />
+                        );
+                    })
+                }
+            </div>
+            <MdKeyboardArrowDown 
+                className="size-5 absolute bottom-0 left-[50%] hover:cursor-pointer" 
+                onClick={handleDownClick}
+            />
+        </div>
+    );
+};
+
+export { ScrollingImagesHorizontal, ScrollingImagesVertical }

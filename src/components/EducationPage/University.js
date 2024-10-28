@@ -18,27 +18,29 @@ import jk from "./Images/University/Typography/jk.jpg";
 import k5 from "./Images/University/Typography/k5.jpg";
 import q2 from "./Images/University/Typography/q2.jpg";
 import r2 from "./Images/University/Typography/r2.jpg";
+import verdanaPage1 from "./Images/University/Typography/Verdana_page1.jpg";
+import verdanaPage2 from "./Images/University/Typography/Verdana_page2.jpg";
 
-
-import { MobileScrollingImages, LaptopScrollingImages } from "./ScrollingImages";
+import { ScrollingImagesHorizontal, ScrollingImagesVertical } from "./ScrollingImages";
 
 const imaginativeSketchingArray = [piano, room, pens1, pens2, pens3, pens4];
 const typographyArray = [
-    flyer1, 
-    flyer2, 
-    flyer3, 
-    flyer4, 
-    binary, 
-    disappear, 
-    guidelines, 
-    peek, 
-    smoke, 
+    flyer1,
+    flyer2,
+    flyer3,
+    flyer4,
+    binary,
+    disappear,
+    guidelines,
+    peek,
+    smoke,
     unique,
     jk,
     k5,
     q2,
     r2
 ];
+const verdanaArray = [verdanaPage1, verdanaPage2];
 
 export default function University() {
     const heightThreshold = 800;
@@ -48,23 +50,18 @@ export default function University() {
     }
 
     return (
-        <div className="flex flex-col gap-3">
+        <div className="relative flex flex-col gap-3 select-none">
             <div className="font-bold text-xl lg:text-4xl">Bachelor of Science (Honours), Life Sciences</div>
             <div className="text-base lg:text-xl font-raleway">National University of Singapore</div>
             <div className="text-base lg:text-xl font-raleway">2021-2025</div>
             <div className="text-base lg:text-xl font-raleway">GPA: 4.53/5.0</div>
             <div className="mt-4 font-semibold text-base lg:text-xl font-raleway">Art of Imaginative Sketching: Distinction</div>
-            {
-                isLaptop() 
-                    ? <LaptopScrollingImages imagesArray={imaginativeSketchingArray} /> 
-                    : <MobileScrollingImages imagesArray={imaginativeSketchingArray} />
-            }
+            <ScrollingImagesHorizontal imagesArray={imaginativeSketchingArray} />
             <div className="mt-4 font-semibold text-base lg:text-xl font-raleway">Typographic Form and Communication</div>
-            {
-                isLaptop() 
-                    ? <LaptopScrollingImages imagesArray={typographyArray} /> 
-                    : <MobileScrollingImages imagesArray={typographyArray} />
-            }
+            <div className="grid grid-cols-1 lg:grid-cols-custom lg:flex-row gap-3">
+                <ScrollingImagesVertical imagesArray={verdanaArray} />
+                <ScrollingImagesHorizontal imagesArray={typographyArray} />
+            </div>
         </div>
     );
 };
