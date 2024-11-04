@@ -20,6 +20,7 @@
     background-image: url('./components/LandingPage/KittyBall/Images/idle-spritesheet.webp');
     height: 73px;
     width: 79px;
+    will-change: transform;
 }
 
 .kitty-lefty {
@@ -28,6 +29,7 @@
     background-image: url('./components/LandingPage/KittyBall/Images/left-spritesheet.webp');
     height: 73px;
     width: 92px;
+    will-change: transform;
 }
 
 .kitty-righty {
@@ -36,6 +38,7 @@
     background-image: url('./components/LandingPage/KittyBall/Images/right-spritesheet.webp');
     height: 73px;
     width: 92px;
+    will-change: transform;
 }
 
 .hover-glowy:hover {
