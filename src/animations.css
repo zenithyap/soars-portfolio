@@ -18,27 +18,24 @@
     position: absolute;
     animation: kitty-idle 1s steps(13) infinite;
     background-image: url('./components/LandingPage/KittyBall/Images/idle-spritesheet.webp');
-    height: 364px;
-    width: 396px;
-    scale: 0.2;
+    height: 73px;
+    width: 79px;
 }
 
 .kitty-lefty {
     position: absolute;
     animation: kitty-standup 0.3s steps(4) forwards, 0.8s kitty-walk 0.4s steps(6) infinite;
     background-image: url('./components/LandingPage/KittyBall/Images/left-spritesheet.webp');
-    height: 364px;
-    width: 460px;
-    scale: 0.2;
+    height: 73px;
+    width: 92px;
 }
 
 .kitty-righty {
     position: absolute;
     animation: kitty-standup 0.4s steps(4) forwards, 0.8s kitty-walk 0.4s steps(6) infinite;
     background-image: url('./components/LandingPage/KittyBall/Images/right-spritesheet.webp');
-    height: 364px;
-    width: 460px;
-    scale: 0.2;
+    height: 73px;
+    width: 92px;
 }
 
 .hover-glowy:hover {
@@ -92,21 +89,21 @@
 
 @keyframes kitty-idle {
     to {
-        background-position: -5148px;
+        background-position: -1027px;
     }
 }
 
 @keyframes kitty-walk {
     from {
-        background-position: -1840px;
+        background-position: -368px;
     }
     to {
-        background-position: -4600px;
+        background-position: -920px;
     }
 }
 
 @keyframes kitty-standup {
     to {
-        background-position: -1840px;
+        background-position: -368px;
     }
 }

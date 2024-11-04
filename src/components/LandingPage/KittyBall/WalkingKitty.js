@@ -49,10 +49,10 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
             ref={kittyRef}
             className={move === LEFT ? "kitty-lefty" : move === RIGHT ? "kitty-righty" : "kitty-idly"} 
             style={{
-                top: `${winHeight - 216}px`,
+                top: `${winHeight - 70}px`,
                 left: 0,
                 transformOrigin: 'left',
-                transform: `translateX(${kittyPosition.current * 5}px)`
+                transform: `translateX(${kittyPosition.current}px)`
             }}
         />
     );
