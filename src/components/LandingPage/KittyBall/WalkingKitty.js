@@ -45,7 +45,6 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
     },[ballPosition]);
 
     return (
-        <div className="">
         <div 
             ref={kittyRef}
             className={move === LEFT ? "kitty-lefty" : move === RIGHT ? "kitty-righty" : "kitty-idly"} 
@@ -56,7 +55,5 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
                 transform: `translateX(${kittyPosition.current * 5}px)`
             }}
         />
-        </div>
-
     );
 }
