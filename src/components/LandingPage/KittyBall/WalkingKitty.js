@@ -23,13 +23,6 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
     }
 
     useEffect(() => {
-        const idleImage = new Image();
-        const leftImage = new Image();
-        const rightImage = new Image();
-        idleImage.src = './Images/kitty-idle.webp';
-        leftImage.src = './Images/left-spritesheet.webp';
-        rightImage.src = './Images/right-spritesheet.webp';
-
         let animationFrame;
 
         const animateKitty = () => {
