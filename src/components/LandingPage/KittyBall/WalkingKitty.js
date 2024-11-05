@@ -23,6 +23,15 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
     }
 
     useEffect(() => {
+        const idleImage = new Image();
+        const leftImage = new Image();
+        const rightImage = new Image();
+        idleImage.src = './Images/idle-spritesheet.png';
+        leftImage.src = './Images/left-spritesheet.png';
+        rightImage.src = './Images/right-spritesheet.png';
+    },[]);
+
+    useEffect(() => {
         let animationFrame;
 
         const animateKitty = () => {
@@ -45,18 +54,15 @@ export default function WalkingKitty( {ballPosition, ballVelocity, isDragging} )
     },[ballPosition]);
 
     return (
-        <div className="">
         <div 
             ref={kittyRef}
             className={move === LEFT ? "kitty-lefty" : move === RIGHT ? "kitty-righty" : "kitty-idly"} 
             style={{
-                top: `${winHeight - 70}px`,
+                top: `${winHeight - 216}px`,
                 left: 0,
                 transformOrigin: 'left',
-                transform: `translateX(${kittyPosition.current}px)`
+                transform: `translateX(${kittyPosition.current * 5}px)`,
             }}
         />
-        </div>
-
     );
 }
