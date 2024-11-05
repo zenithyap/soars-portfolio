@@ -50,16 +50,6 @@
     transform-origin: top;
 }
 
-.flip-cardy {
-    transform: rotateY(-180deg);
-    transform-origin: right;
-    transition: transform 1s ease-in-out
-}
-
-.group:hover .flip-cardy {
-    transform: rotateY(-360deg);
-}
-
 @keyframes glow {
     0% {
         color: #ff66b2;
