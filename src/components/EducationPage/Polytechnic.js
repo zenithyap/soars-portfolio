@@ -11,10 +11,10 @@ export default function Polytechnic() {
             <div className="mt-4 font-semibold text-base lg:text-xl font-raleway">Visual Communications module: Distinction</div>
             <div className="flex flex-col lg:flex-row gap-3">
                 <div>
-                    <img src={page1} alt="page1alt" />
+                    <img src={page1} alt="page1alt" loading="lazy" />
                 </div>
                 <div>
-                    <img src={page2} alt="page2alt" />
+                    <img src={page2} alt="page2alt" loading="lazy" />
                 </div>
             </div>
         </div>

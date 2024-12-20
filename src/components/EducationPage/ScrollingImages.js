@@ -30,7 +30,7 @@ function ScrollingImagesHorizontal({ imagesArray }) {
                 {
                     imagesArray.map((item, key) => {
                         return (
-                            <img id={`${key}`} src={item} alt={`${item}`} className="w-[600px]" />
+                            <img id={`${key}`} src={item} alt={`${item}`} loading="lazy" className="w-[600px]" />
                         );
                     })
                 }
@@ -69,7 +69,7 @@ function ScrollingImagesVertical({ imagesArray }) {
                 {
                     imagesArray.map((item, key) => {
                         return (
-                            <img id={`${key}`} src={item} alt={`${item}`} className='w-full' />
+                            <img id={`${key}`} src={item} alt={`${item}`} loading="lazy" className='w-full' />
                         );
                     })
                 }

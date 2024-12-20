@@ -18,19 +18,19 @@ export default function DigitalArt() {
             </div>
             <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4 border-24 border-transparent w-5/6">
                 <div className="grid gap-4">
-                    <img className="rounded-xl" src={capybara} alt="capybara_image" />
-                    <img className="rounded-xl" src={cat_piano} alt="cat_piano_image" />
-                    <img className="rounded-xl" src={campfire} alt="campfire_image" />
+                    <img className="rounded-xl" src={capybara} alt="capybara_image" loading="lazy" />
+                    <img className="rounded-xl" src={cat_piano} alt="cat_piano_image" loading="lazy" />
+                    <img className="rounded-xl" src={campfire} alt="campfire_image" loading="lazy" />
                 </div>
                 <div className="grid gap-4">
-                    <img className="rounded-xl" src={shooting_star} alt="shooting_star_image" />
-                    <img className="rounded-xl" src={grandma} alt="grandma_image" />
-                    <img className="rounded-xl" src={butterfly} alt="butterfly_image" />
+                    <img className="rounded-xl" src={shooting_star} alt="shooting_star_image" loading="lazy" />
+                    <img className="rounded-xl" src={grandma} alt="grandma_image" loading="lazy" />
+                    <img className="rounded-xl" src={butterfly} alt="butterfly_image" loading="lazy" />
                 </div>
                 <div className="grid gap-4">
-                    <img className="rounded-xl" src={sad_fox} alt="sad_fox_image" />
-                    <img className="rounded-xl" src={sun_moon} alt="sun_moon_image" />
-                    <img className="rounded-xl" src={souffle} alt="souffle_image" />
+                    <img className="rounded-xl" src={sad_fox} alt="sad_fox_image" loading="lazy" />
+                    <img className="rounded-xl" src={sun_moon} alt="sun_moon_image" loading="lazy" />
+                    <img className="rounded-xl" src={souffle} alt="souffle_image" loading="lazy" />
                 </div>
             </div>
         </div>

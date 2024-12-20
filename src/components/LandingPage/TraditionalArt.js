@@ -20,22 +20,22 @@ export default function TraditionalArt() {
             </div>
             <div className="grid lg:grid-cols-3 sm:grid-cols-1 items-start gap-4 border-24 border-transparent w-5/6">
                 <div className="grid gap-4">
-                    <img className="rounded-xl" src={mural} alt="mural_image" />
-                    <img className="rounded-xl" src={dog} alt="dog_image" />
-                    <img className="rounded-xl" src={toothless} alt="toothless_image" />
+                    <img className="rounded-xl" src={mural} alt="mural_image" loading="lazy" />
+                    <img className="rounded-xl" src={dog} alt="dog_image" loading="lazy" />
+                    <img className="rounded-xl" src={toothless} alt="toothless_image" loading="lazy" />
                 </div>
                 <div className="grid gap-4">
-                    <img className="rounded-xl" src={fox} alt="fox_image" />
-                    <img className="rounded-xl" src={forest} alt="forest_image" />
-                    <img className="rounded-xl" src={deer} alt="deer_image" />
-                    <img className="rounded-xl" src={flowerfield} alt="flowerfield_image" />
-                    <img className="rounded-xl" src={nini} alt="nini_image" />
+                    <img className="rounded-xl" src={fox} alt="fox_image" loading="lazy" />
+                    <img className="rounded-xl" src={forest} alt="forest_image" loading="lazy" />
+                    <img className="rounded-xl" src={deer} alt="deer_image" loading="lazy" />
+                    <img className="rounded-xl" src={flowerfield} alt="flowerfield_image" loading="lazy" />
+                    <img className="rounded-xl" src={nini} alt="nini_image" loading="lazy" />
                 </div>
                 <div className="grid gap-4">
-                    <img className="rounded-xl" src={couple} alt="couple_image" />
-                    <img className="rounded-xl" src={otah} alt="otah_image" />
-                    <img className="rounded-xl" src={abstract} alt="abstract_image" />
-                    <img className="rounded-xl" src={flower} alt="flower_image" />
+                    <img className="rounded-xl" src={couple} alt="couple_image" loading="lazy" />
+                    <img className="rounded-xl" src={otah} alt="otah_image" loading="lazy" />
+                    <img className="rounded-xl" src={abstract} alt="abstract_image" loading="lazy" />
+                    <img className="rounded-xl" src={flower} alt="flower_image" loading="lazy" />
                 </div>
             </div>
         </div>
